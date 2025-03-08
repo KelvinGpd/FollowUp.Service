@@ -13,7 +13,6 @@ class User {
     static validate(obj) {
         return (
             obj &&
-            typeof obj.uuid === "string" &&
             typeof obj.name === "string" &&
             typeof obj.branchName === "string" &&
             typeof obj.branchAddress === "string" &&
@@ -36,3 +35,5 @@ class User {
         );
     }
 }
+
+module.exports = User;

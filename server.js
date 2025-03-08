@@ -1,8 +1,8 @@
 const express = require("express");
 const { existsSync, readJson, writeJson } = require("fs-extra");
 const path = require("path");
-const User = require("./dtos/User");
-const Medication = require("./dtos/Medication");
+const User = require("./dtos/user");
+const Medication = require("./dtos/medication");
 const cors = require("cors");
 
 const app = express();
@@ -124,7 +124,7 @@ app.put("/data/prescriptions", async (req, res) => {
 // CREATE A NEW USER
 app.post("/data/users", async (req, res) => {
   try {
-    const newUser = User.fromObject(req.body); // Validate & create user object
+    const newUser = User.fromObject(req.body);
     const users = existsSync(USER_DATA_PATH)
       ? await readJson(USER_DATA_PATH)
       : [];
