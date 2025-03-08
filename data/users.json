@@ -4,7 +4,7 @@
     "uuid": "",
     "branchName": "",
     "branchAddress": "",
-    "ailments": "cancer",
-    "phoneNumber": ""
+    "ailments": ["cancer", "diabetes", "heart disease", "hypertension", "stroke"],
+    "phoneNumber": "55555555"
   }
 ]
