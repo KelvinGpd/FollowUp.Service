@@ -3,8 +3,11 @@ const { existsSync, readJson, writeJson } = require("fs-extra");
 const path = require("path");
 const User = require("./dtos/User");
 const Medication = require("./dtos/Medication");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
+
 const PORT = 3000;
 
 const USER_DATA_PATH = path.join(__dirname, "data/users.json");
@@ -14,11 +17,11 @@ const whiteListedIps = []; //add here once we use
 
 app.use(express.json());
 app.use((req, res, next) => {
-  const clientIp = req.ip || req.connection.remoteAddress;
+  //const clientIp = req.ip || req.connection.remoteAddress;
 
-  if (!whiteListedIps.includes(clientIp)) {
-    return res.status(403).json({ error: "Access denied" });
-  }
+  //   if (!whiteListedIps.includes(clientIp)) {
+  //     return res.status(403).json({ error: "Access denied" });
+  //   }
 
   next();
 });
