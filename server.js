@@ -26,6 +26,20 @@ app.use((req, res, next) => {
   next();
 });
 
+//GET ALL USERS
+app.get("/data/users/all", async (req, res) => {
+  if (!existsSync(USER_DATA_PATH)) {
+    return res.status(404).json({ error: "User data file not found" });
+  }
+
+  try {
+    const users = await readJson(USER_DATA_PATH);
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to read user file" });
+  }
+});
+
 //GET USER BY NAME
 app.get("/data/users", async (req, res) => {
   const { name } = req.query;
