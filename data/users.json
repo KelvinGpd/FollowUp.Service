@@ -4,7 +4,15 @@
     "uuid": "",
     "branchName": "",
     "branchAddress": "",
-    "ailments": ["cancer", "diabetes", "heart disease", "hypertension", "stroke"],
+    "ailments": "cancer",
     "phoneNumber": "55555555"
+  },
+  {
+    "uuid": "980996d6-c062-400d-a204-968115b0c001",
+    "name": "hello",
+    "branchName": "hello",
+    "branchAddress": "hello",
+    "ailments": "none",
+    "phoneNumber": "hello"
   }
 ]

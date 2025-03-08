@@ -6,7 +6,7 @@ class User {
         this.name = name;
         this.branchName = branchName;
         this.branchAddress = branchAddress;
-        this.ailments = Array.isArray(ailments) ? ailments : [];
+        this.ailments = ailments;
         this.phoneNumber = phoneNumber;
     }
 
@@ -16,8 +16,7 @@ class User {
             typeof obj.name === "string" &&
             typeof obj.branchName === "string" &&
             typeof obj.branchAddress === "string" &&
-            Array.isArray(obj.ailments) &&
-            obj.ailments.every(ailment => typeof ailment === "string") &&
+            typeof obj.ailments === "string" &&
             typeof obj.phoneNumber === "string"
         );
     }
