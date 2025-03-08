@@ -12,6 +12,8 @@
   "dependencies": {
     "express": "^4.21.2",
     "fs-extra": "^11.3.0",
+    "package": "^1.0.1",
+    "packages": "^0.0.8",
     "uuid": "^11.1.0"
   }
 }
