@@ -1,7 +1,7 @@
 [
   {
     "uuid": "aa0e8400-e29b-41d4-a716-446655440000",
-    "patientName": "Jackson",
+    "patientName": "Jane Doe",
     "medicationName": "Cancer Pillsss",
     "consumptionDetails": "Take with water after meals",
     "prescriptionDate": "2025-03-08",
@@ -14,7 +14,7 @@
   },
   {
     "uuid": "550e8400-e29b-41d4-a716-446655440000",
-    "patientName": "Jackson",
+    "patientName": "Jane Doe",
     "medicationName": "Paracetamol",
     "consumptionDetails": "Take with water after meals",
     "prescriptionDate": "2025-03-08",
@@ -27,7 +27,7 @@
   },
   {
     "uuid": "440e8400-e29b-41d4-a716-446655440000",
-    "patientName": "Jackson",
+    "patientName": "Jane Doe",
     "medicationName": "Random Thing",
     "consumptionDetails": "Take with water after meals",
     "prescriptionDate": "2025-03-09",
