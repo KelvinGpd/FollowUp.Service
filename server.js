@@ -1,8 +1,8 @@
 const express = require("express");
 const { existsSync, readJson, writeJson } = require("fs-extra");
 const path = require("path");
-const User = require("./app/dtos/user");
-const Medication = require("./app/dtos/medication");
+const User = require(".dtos/user");
+const Medication = require("./dtos/medication");
 const cors = require("cors");
 
 const app = express();
