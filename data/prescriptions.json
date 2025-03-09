@@ -10,7 +10,7 @@
     "amount": 30,
     "dosage": 500,
     "lastTakenDate": "2025-03-10",
-    "hasTaken": false
+    "hasTaken": true
   },
   {
     "uuid": "550e8400-e29b-41d4-a716-446655440000",
