@@ -2,15 +2,16 @@
   {
     "uuid": "aa0e8400-e29b-41d4-a716-446655440000",
     "patientName": "Jane Doe",
-    "medicationName": "Cancer Pillsss",
+    "medicationName": "Comprime???",
     "consumptionDetails": "Take with water after meals",
     "prescriptionDate": "2025-03-08",
     "expDate": "2025-09-01",
     "interval": "8 hours",
-    "amount": 30,
+    "amount": 2,
     "dosage": 500,
     "lastTakenDate": "2025-03-10",
-    "hasTaken": true
+    "hasTaken": true,
+    "img_url": "https://i.ibb.co/Y4kz9VSP/comprime.png"
   },
   {
     "uuid": "550e8400-e29b-41d4-a716-446655440000",
@@ -20,22 +21,24 @@
     "prescriptionDate": "2025-03-08",
     "expDate": "2025-09-01",
     "interval": "8 hours",
-    "amount": 30,
+    "amount": 1,
     "dosage": 500,
     "lastTakenDate": "2025-03-10",
-    "hasTaken": false
+    "hasTaken": false,
+    "img_url": "https://i.ibb.co/hR1LdCR5/comprime2.png"
   },
   {
     "uuid": "440e8400-e29b-41d4-a716-446655440000",
     "patientName": "Jane Doe",
-    "medicationName": "Random Thing",
+    "medicationName": "Hydrochlorothiazide",
     "consumptionDetails": "Take with water after meals",
     "prescriptionDate": "2025-03-09",
     "expDate": "2025-09-01",
     "interval": "8 hours",
-    "amount": 30,
+    "amount": 3,
     "dosage": 500,
     "hasTaken": false,
-    "lastTakenDate": "2025-03-07"
+    "lastTakenDate": "2025-03-07",
+    "img_url": "https://thumbs.dreamstime.com/b/one-single-pill-isolated-white-table-89122099.jpg"
   }
 ]

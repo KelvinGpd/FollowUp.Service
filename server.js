@@ -5,6 +5,24 @@ const User = require("./dtos/user");
 const Medication = require("./dtos/medication");
 const cors = require("cors");
 
+const randomMedications = [
+  "https://i.ibb.co/Y4kz9VSP/comprime.png",
+  "https://i.ibb.co/hR1LdCR5/comprime2.png",
+  "https://i.ibb.co/wZCLJVX7/comprime3.jpg",
+  "https://i.ibb.co/GvxMVDHX/comprime4-removebg-preview.png",
+  "https://i.ibb.co/TxqzbB7R/Drug-Item-26975-removebg-preview.png",
+  "https://i.ibb.co/v4PYw3CK/single-softgel-capsule-pill-isolated-blue-dietary-drug-over-white-background-85532805-1-removebg-pre.png",
+  "https://i.ibb.co/TBnMsVVy/R-removebg-preview.png",
+];
+
+// const randomMedications = [
+//   "https://thumbs.dreamstime.com/b/one-single-pill-isolated-white-table-89122099.jpg",
+//   "https://c1.staticflickr.com/9/8510/8488782713_47d8551e38_b.jpg",
+//   "https://cdn.shopify.com/s/files/1/0084/9579/2205/products/80183-795-429_1024x.jpg",
+//   "https://canadianpharmacyonline247.com/lib/products/457.jpg",
+//   "https://buzzrx.s3.amazonaws.com/gs/DrugItem_26975.JPG",
+// ];
+
 const app = express();
 app.use(cors());
 
@@ -151,6 +169,11 @@ app.post("/data/users", async (req, res) => {
 app.post("/data/prescriptions", async (req, res) => {
   try {
     const newMedication = Medication.fromObject(req.body); // Validate & create medication object
+
+    const randomIndex = Math.floor(Math.random() * randomMedications.length);
+    const randomElement = randomMedications[randomIndex];
+    newMedication.img_url = randomElement;
+
     const medications = existsSync(MED_DATA_PATH)
       ? await readJson(MED_DATA_PATH)
       : [];
