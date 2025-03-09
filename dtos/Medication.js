@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require("uuid");
 
 class Medication {
-    constructor(patientName, medicationName, consumptionDetails, prescriptionDate, expDate, interval, amount, dosage, lastTakenDate) {
+    constructor(patientName, medicationName, consumptionDetails, prescriptionDate, expDate, interval, amount, dosage) {
         this.uuid = uuidv4();
         this.patientName = patientName;
         this.medicationName = medicationName;
@@ -11,7 +11,7 @@ class Medication {
         this.interval = interval;
         this.amount = amount;
         this.dosage = dosage;
-        this.lastTakenDate = lastTakenDate;
+        this.lastTakenDate = '';
     }
 
     static validate(obj) {
@@ -24,8 +24,7 @@ class Medication {
             typeof obj.expDate === "string" &&
             typeof obj.amount === "number" &&
             typeof obj.dosage === "number" &&
-            typeof obj.interval === "string" &&
-            typeof obj.lastTakenDate === "string"
+            typeof obj.interval === "string"
         ) {
             return true;
         }
@@ -45,7 +44,6 @@ class Medication {
             obj.interval,
             obj.amount,
             obj.dosage,
-            obj.lastTakenDate
         );
     }
 }
