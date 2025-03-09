@@ -1,8 +1,8 @@
 const express = require("express");
 const { existsSync, readJson, writeJson } = require("fs-extra");
 const path = require("path");
-const User = require("./dtos/User");
-const Medication = require("./dtos/Medication");
+const User = require("./dtos/user");
+const Medication = require("./dtos/medication");
 const cors = require("cors");
 
 const app = express();
@@ -24,6 +24,20 @@ app.use((req, res, next) => {
   //   }
 
   next();
+});
+
+//GET ALL USERS
+app.get("/data/users/all", async (req, res) => {
+  if (!existsSync(USER_DATA_PATH)) {
+    return res.status(404).json({ error: "User data file not found" });
+  }
+
+  try {
+    const users = await readJson(USER_DATA_PATH);
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to read user file" });
+  }
 });
 
 //GET USER BY NAME
@@ -111,7 +125,7 @@ app.put("/data/prescriptions", async (req, res) => {
 // CREATE A NEW USER
 app.post("/data/users", async (req, res) => {
   try {
-    const newUser = User.fromObject(req.body); // Validate & create user object
+    const newUser = User.fromObject(req.body);
     const users = existsSync(USER_DATA_PATH)
       ? await readJson(USER_DATA_PATH)
       : [];
