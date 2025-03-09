@@ -97,7 +97,7 @@ app.get("/data/prescriptions", async (req, res) => {
   try {
     const medications = await readJson(MED_DATA_PATH);
     const userMedications = medications.filter(
-      (med) => med.patientName === name
+      (med) => med.patientName.toLowerCase() === name.toLowerCase()
     );
     res.json(userMedications);
   } catch (err) {
