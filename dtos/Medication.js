@@ -22,8 +22,8 @@ class Medication {
             typeof obj.consumptionDetails === "string" &&
             typeof obj.prescriptionDate === "string" &&
             typeof obj.expDate === "string" &&
-            typeof obj.amount === "number" &&
-            typeof obj.dosage === "number" &&
+            typeof obj.amount === "string" &&
+            typeof obj.dosage === "string" &&
             typeof obj.interval === "string"
         ) {
             return true;
