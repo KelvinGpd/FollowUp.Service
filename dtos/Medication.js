@@ -11,7 +11,7 @@ class Medication {
         this.interval = interval;
         this.amount = amount;
         this.dosage = dosage;
-        this.lastTakenDate = '';
+        this.hasTaken = false;
     }
 
     static validate(obj) {
