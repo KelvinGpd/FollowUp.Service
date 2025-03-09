@@ -95,6 +95,7 @@ app.put("/data/prescriptions", async (req, res) => {
     }
 
     medications[index].lastTakenDate = newDate;
+    medications[index].hasTaken = true;
     await writeJson(MED_DATA_PATH, medications, { spaces: 2 });
 
     res.json({
@@ -154,5 +155,5 @@ app.post("/data/prescriptions", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://0.0.0.0:${PORT}`);
 });
